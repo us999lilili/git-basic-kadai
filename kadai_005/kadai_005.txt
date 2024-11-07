@@ -1,0 +1,32 @@
+shiori@Ueeemac git_challenge % echo 'Hello, World!' >> hello_world.txt
+
+shiori@Ueeemac git_challenge % git add hello_world.txt
+fatal: not a git repository (or any of the parent directories): .git
+shiori@Ueeemac git_challenge % git init
+Initialized empty Git repository in /Users/shiori/git_challenge/.git/
+shiori@Ueeemac git_challenge % git add hello_world.txt
+shiori@Ueeemac git_challenge % git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   hello_world.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .DS_Store
+
+shiori@Ueeemac git_challenge % git commit -m '最初のコミット'
+[main (root-commit) 093c486] 最初のコミット
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello_world.txt
+shiori@Ueeemac git_challenge % echo 'こんにちは、世界！' >> hello_world.txt 
+shiori@Ueeemac git_challenge % git add hello_world.txt
+shiori@Ueeemac git_challenge % git commit -m '二回目のコミット'
+[main 6e80d43] 二回目のコミット
+ 1 file changed, 1 insertion(+)
+shiori@Ueeemac git_challenge % git log --oneline
+6e80d43 (HEAD -> main) 二回目のコミット
+093c486 最初のコミット
